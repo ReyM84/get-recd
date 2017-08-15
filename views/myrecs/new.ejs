@@ -1,6 +1,7 @@
 <%- include('./../_partials/header') %>
-  <h1>Create A Rec</h1>
-  <form action="/myrecs/new" method="POST">
+	<h1>Create a Rec</h1><br>
+	<br>
+<form action="/myrecs/new" method="POST">
     <div>
       <input type="text" name="search"
               placeholder="Enter an Artist Name">
@@ -10,5 +11,58 @@
       </span>
     </div>
   </form>
+	<table class="dashboard-table">
+		<colgroup>
+			<col width="150">
+			<col width="200">
+			<col width="200">
+			<col width="200">
+			<col width="200">
+			<col width="200">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>
+					<a href="#">Include? <i class="fa fa-caret-down"></i></a>
+				</th>
+				<th>
+					<a href="#">Cover <i class="fa fa-caret-down"></i></a>
+				</th>
+				<th>
+					<a href="#">Album Name <i class="fa fa-caret-down"></i></a>
+				</th>
+				<th>
+					<a href="#">Artist Name <i class="fa fa-caret-down"></i></a>
+				</th>
+				<th>
+					<a href="#">Release Date <i class="fa fa-caret-down"></i></a>
+				</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+		<tr>
+			<td>
+				<div class="switch">
+					<input class="switch-input" id="defaultSwitch" name="defaultSwitch" type="checkbox"> <label class="switch-paddle" for="defaultSwitch"><span class="show-for-sr">Default Switch</span></label>
+				</div>
+			</td>
+			<td>
+				<div class="flex-container align-justify align-top">
+					<div class="flex-child-shrink"><img class="dashboard-table-image" src="http://lorempixel.com/50/50/people/"></div>
+				</div>
+			</td>
+			<td>Single Line</td>
+			<td class="bold">A Bold Line</td>
+			<td>A Date</td>
+			<td class="listing-inquiry-status"></td>
+		</tr>
+	</table><br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<button class="hollow button medium success small-1 text-right columns">Save</button> <!--Once save buttons have been made, appear "Your changges have been saved" message  -->
+</body>
+</html>
 </body>
 </html>
