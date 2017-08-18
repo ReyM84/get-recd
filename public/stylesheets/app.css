@@ -250,6 +250,13 @@ a {
 .rootindximg {
     height: 250px;
     weight: 250px;
+   
+  
+}
+
+.indexlist {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 
