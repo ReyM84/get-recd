@@ -242,14 +242,49 @@ a {
 }
 
 .listimg {
-    height: 75px;
-    width: 75px;
+    max-width: 175px;
+    max-height: 175px;
+    width: 250px;
+    height: 250px;
+    padding: 2px;
+    position: relative;
+    width: 100%;
+    display: inline;
+    margin-bottom: 10%;
     
 }
 
 .rootindximg {
-    height: 250px;
-    weight: 250px;
+    height: 235px;
+    weight: 235px;
+    padding: 3px;
+
 }
 
 
+.button.secondary {
+    margin-left: 10%;
+    margin-top: -7%;
+    width: 75px;
+}
+
+.deletebut {
+    margin-left: 2% 
+}
+
+.myrectitle {
+    margin-left: 1.5%:
+}
+
+.albumcont {
+    margin-top: 5%;
+}
+
+.headerlogo {
+    font-size: 75px;
+}
+
+.indexlist {
+    border: 1px solid rgba(0,0,0,.10);
+    border-radius: 7px;
+}

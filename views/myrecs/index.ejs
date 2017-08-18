@@ -4,27 +4,31 @@
   <h1>My Recs</h1>
   
 <div class="row">
-<% lists.forEach(function(list) { %>
-      <h4> <%= list.title %></h4> 
-      <span>
-        <form action="myrecs/<%= list._id %>?_method=DELETE" method="post">
-          <button type="submit" class="hollow button alert" onclick="clickAlert()" value="Click-2-Alert" href="#">Delete</button>
-        </form>
-        <form action="myrecs/update" method="post">
-          <button name="id" value="<%= list._id %>" type="submit" class="hollow button secondary" href="#">Add</button>
-        </form>
-        </span>
-      <br>
+  <% lists.forEach(function(list) { %>
+        <div class="row myrecopts">
+          <h4 class="myrectitle"> <%= list.title %></h4> 
+          <span>
+            <form action="myrecs/<%= list._id %>?_method=DELETE" method="post">
+              <button type="submit" class="hollow button alert deletebut" onclick="clickAlert()" value="Click-2-Alert" href="#">Delete</button>
+            </form>
+            <form action="myrecs/update" method="post">
+              <button name="id" value="<%= list._id %>" type="submit" class="hollow button secondary addbut" href="#">Add</button>
+            </form>
+            </span>
+        </div>
   <% list.albums.forEach(function(album) { %>
-      <ul>
-        <li><img class="listimg" src="<%= album.thumb %>" alt=""> <a href=" <%= album.url %>" target="_blank"><%= album.title %></a></p></li>  
-      </ul> 
-
-  
-     
-   <% }) %>
-   
-<% }) %>
+    
+          <div class="large-2 columns">
+        <span><a href=" <%= album.url %>" target="_blank"><img class="listimg" src="<%= album.thumb %>" alt="">
+              </a> </span>
+        </div>
+        <div class="large-2 columns"></div>
+      
+    
+      
+    <% }) %>
+    
+  <% }) %>
 
 </div>
 
