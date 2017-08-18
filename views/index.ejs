@@ -1,9 +1,18 @@
 <%- include('./_partials/header') %>
     <h1>Get Recd</h1>
-    <ul>
-
-      <%= lists %>
-    </ul>
-    <!-- <a href="/myrecs">My Recs</a> -->
+ <div class="masonry-css row albumcont">
+   <% lists.forEach(function(list) { %>
+     <div class="masonry-css-item">
+       <% if (list.albums[0]) { %><img class="rootindximg" src="<%= list.albums[0].thumb %>" alt=""><% } %>
+     </div> 
+     <div class="indexlist" >  
+       <h4><%= list.title %></h4>
+         <% list.albums.forEach(function(album) { %>
+           
+          <a href=" <%= album.url %>" target="_blank"><%= album.title %></a></p>
+         <% }) %>
+       </div>
+   <% }) %>
+ </div> 
   </body>
 </html>
